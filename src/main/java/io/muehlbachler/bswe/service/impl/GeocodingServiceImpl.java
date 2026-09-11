@@ -26,6 +26,11 @@ public class GeocodingServiceImpl implements GeocodingService {
   @Autowired
   private final RestTemplate restTemplate;
 
+  /**
+  Gets a DTO of coordinates for a certain location.
+  @param String location - The location for the requested coordinates.
+  @return The Coordinates DTO of requested location or null.
+  */
   @Override
   public Coordinates fetchCoordinates(final String location) {
     if (location == null || location.isEmpty()) {
